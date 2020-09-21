@@ -10,6 +10,5 @@ export default (app: Router): void => {
     route.get('/welcome',
         async (req: Request, res: Response) => {
             res.sendStatus(200)
-            res.send("Hello!")
         })
 };
