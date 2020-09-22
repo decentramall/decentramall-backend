@@ -20,7 +20,7 @@ export function initializeStore(sequelize: Sequelize) {
     return Store.init({
         id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            autoIncrement: true,
             primaryKey: true,
         },
         publicId: {

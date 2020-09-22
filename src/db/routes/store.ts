@@ -10,14 +10,14 @@ export default (app: Router): void => {
     route.get(
         '/id/:storeId',
         async (req: Request, res: Response) => {
-            return await StoreService.get(req.params.storeId);
+            res.send(await StoreService.get(req.params.storeId));
         },
     );
 
     route.get(
         '/',
         async (req: Request, res: Response) => {
-            return await StoreService.getAll();
+            res.send(await StoreService.getAll());
         },
     );
 
@@ -53,6 +53,7 @@ export default (app: Router): void => {
                     tx,
                 );
             } catch (e) {
+                console.log(e)
                 returningStatus = 403;
             } finally {
                 res.sendStatus(returningStatus);
