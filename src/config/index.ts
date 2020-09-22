@@ -11,7 +11,7 @@ if (!envFound) {
 }
 
 export default {
-    port: parseInt(process.env.PORT!, 3030),
+    port: parseInt(process.env.PORT!, 10),
     dbUrl: process.env.DATABASE_URL!,
     logs: {
         level: process.env.LOG_LEVEL || 'silly',
