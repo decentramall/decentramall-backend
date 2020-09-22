@@ -23,12 +23,12 @@ export default class StoreService {
     }
 
     public static async get(
-        storePublicId: string,
+        publicId: string,
     ): Promise<Store | null> {
-        return await Store.findOne({ where: { storePublicId }, raw: true });
+        return Store.findOne({ where: { publicId }, raw: true });
     }
 
     public static async getAll(): Promise<Store[]> {
-        return await Store.findAll({ raw: true });
+        return Store.findAll({ raw: true });
     }
 }
