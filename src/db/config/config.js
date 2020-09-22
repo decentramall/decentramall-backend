@@ -9,5 +9,12 @@ module.exports = {
         dialectOptions: {
             bigNumberStrings: true
         }
+    },
+    production: {
+        dialect: 'postgres',
+        dialectOptions: {
+            bigNumberStrings: true,
+        },
+        migrationStorageTableName: 'sequelize_meta_production',
     }
 };
