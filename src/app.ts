@@ -1,4 +1,4 @@
-import config from './db/config/config';
+import config from './config';
 import express from 'express';
 import Logger from './loaders/logger';
 import loaders from './loaders';
